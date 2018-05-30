@@ -34,13 +34,13 @@ module NgpVan
   end
 
   # Modify the current configuration
-  # @yieldparam [NgpVan::Configuration] config The current NgpVan config
-  # ```
-  # NgpVan.configure do |config|
-  #   config.application_name = 'CroninAndSons'
-  #   config.api_key = 'af263f2a-86fd-443b-a1b6-f5b7bce8db30|1'
-  # end
-  # ```
+   @yieldparam [NgpVan::Configuration] config The current NgpVan config
+
+   NgpVan.configure do |config|
+     config.application_name = 'CroninAndSons'
+     config.api_key = 'af263f2a-86fd-443b-a1b6-f5b7bce8db30|1'
+   end
+
   def self.configure
     yield configuration
   end
