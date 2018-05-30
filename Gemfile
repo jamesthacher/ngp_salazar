@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 ruby '2.3.7'
 gemspec
-
+gem 'rails_autoscale_agent'
 gem 'bundler', '~> 1.6'
 gem 'faker', '~> 1.6'
 gem 'pry'
