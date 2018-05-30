@@ -36,10 +36,18 @@ module NgpVan
   # Modify the current configuration
    @yieldparam [NgpVan::Configuration] config The current NgpVan config
 
-   NgpVan.configure do |config|
-     config.application_name = 'CroninAndSons'
-     config.api_key = 'af263f2a-86fd-443b-a1b6-f5b7bce8db30|1'
-   end
+  NgpVan.configure do |config|
+  config.application_name = 'MyCampaignApp'
+
+  # See http://developers.everyaction.com/van-api#van-authentication
+  config.api_key = 'de286a1a-f2e7-421a-91b8-f8cc8201558f|1'
+
+  # Defaults to "https://api.securevan.com/v4/"
+  config.api_endpoint = 'https://intlapi.securevan.com/v4'
+
+  # Defaults to "NGP VAN Ruby Gem #{NgpVan::VERSION}"
+  config.user_agent = 'CustomUserAgent'
+end
 
   def self.configure
     yield configuration
